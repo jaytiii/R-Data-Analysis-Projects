@@ -3,10 +3,6 @@
 This project focuses on advance data Visulization (BoxPlot, Histogram, Facetted Bar Chart) different  using R. 
 The objective is to explore and compare different visualization methods for understanding data distributions and categories.
 
-## Files
-- `analysis.Rmd` – R Markdown file containing the analysis
-- `plots/` – Generated visualizations
-
 ## Libraries Used
 - readr
 - ggplot2
@@ -16,10 +12,10 @@ The objective is to explore and compare different visualization methods for unde
 ### Boxplot
   <img src="plots/boxplot.png" width="400">
 
-### Histogram Plot
+### Bar Plot
   <img src="plots/histogram.png" width="400">
 
-### Bar Chart
+### Histogram Chart
   <img src="plots/bar_chart.png" width="400">
 
 ## Summary
