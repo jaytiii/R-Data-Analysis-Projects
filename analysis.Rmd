@@ -1,0 +1,186 @@
+---
+title: "Coding Assignment 01"
+date: "`r Sys.Date()`"
+output: html_document
+text.align: justify
+---
+
+----
+
+### Type your student name and ID
+
+Name and ID: Jayti Saparia and 702792621
+
+---
+
+#### Task 1: Calculate the following quantities:
+
+1. The sum of 10.01, 25.003, and 37.5
+2. The square root of 214
+3. Calculate the 10-based logarithm of 90, and multiply the result with pi 
+(Hint: use `log()` and `pi`).
+
+```{r}
+# your code goes here
+10.01+25.003+37.5 # printing the sum 
+sqrt(214) #calculating the square root
+z = log(90, base = 10) #calculate log
+y = pi
+print(z*y) # printing the value of log*pi
+```
+
+----
+
+
+#### Task 2: Assigns numbers 25 and 55 to objects x and y, like this: x<-25, y<-55
+
+1. Calculate the product of x and y
+2. Store the result in a new object called z
+3. Make a vector of the objects x, y, and z. Use this command myvec<-c(x,y,z) then print it
+
+```{r}
+# your code goes here
+x <-25 #assigning the value of x
+y <-55 #assigning the value of y
+z = x*y #priniting the product of x and y
+myvec <-c(x,y,z) #creating avector of myvec
+myvec #printing vector myvec
+```
+
+----
+
+#### Task 3: The following is Jacket sales data as per the temperature: Temp(43, 39, 62), Jacket_Sold(23, 36, 13).
+
+1. Enter the data in a data frame with two columns.
+2. Print the data frame structure, no. of columns, and no. of rows
+3. Print the entire data frame.
+4. Print only the Jacket_Sold
+5. Print the temperature when you sold 36 jackets
+
+```{r}
+# your code goes here
+sales_data <- data.frame(Temp=c(43,39,62), Jacket_sold=c(23,36,13)) #creating a data frame
+str(sales_data) #str of data frame
+ncol(sales_data) #no of column of the data frame
+nrow(sales_data) #no of rows in the data frame
+sales_data[c("Jacket_sold")] #displaying only Jacket_sold
+sales_data[2,1] #accessing the value of temp when 36 jackets sold
+```
+
+----
+
+#### Task 4: Download and load the ggplot2 package.
+
+```{r}
+# your code goes here
+#calling required libraries
+library(ggplot2)
+library(readr)
+```
+
+----
+
+#### Task 5: Follow the instruction sheet.
+
+```{r}
+# loading USArrests data
+data(USArrests)
+#View(USArrests) #commenting out as I'm using Mac
+str(USArrests)
+```
+
+----
+
+#### Task 6: Follow the instruction sheet.
+
+```{r}
+# your code goes here
+ggplot(data = USArrests, aes(x=UrbanPop, y=Rape))+  #difinding data for a graph
+  geom_point() #for making a scatter plot
+```
+
+----
+
+#### Task 7: Follow the instruction sheet.
+
+```{r}
+# your code goes here
+ggplot(data=USArrests, aes(x=UrbanPop, y=Rape)) + #adding dataset to the graph
+  geom_point(shape=15, color="blue3", size=2) #defining characterstics of points
+```
+
+----
+
+#### Task 8: Follow the instruction sheet.
+
+```{r}
+# your code goes here
+ggplot(data=USArrests, aes(x=UrbanPop, y=Rape)) + #creating a graph
+  geom_point(shape=3, color="blue", size=1.5) + #adding factors to scatter points
+  theme_bw() #adding a theme
+```
+
+----
+
+#### Task 9: Follow the instruction sheet.
+
+```{r}
+# your code goes here
+ggplot(data=USArrests, aes(x=UrbanPop, y=Rape)) + #creating a graph
+  geom_point(shape=13, color="red", size=2) + #adding characterstics
+  labs(x="Urban Population", y="Rape", title="The Relationship between Urban Population and Rape", subtitle = "Year 1973") + #added lables
+  theme_classic() #added theme
+```
+
+----
+
+#### Task 10: Saving the scatter plot as "Scatter Plot.png":
+
+```{r}
+# your code goes here
+ggsave("Scatter Plot.png") #saving above graph
+```
+
+----
+
+#### Task 11: Download the names_popularity dataset and set the work directory:
+
+```{r}
+# Make sure to set the work directory where you saved the dataset and the notebook
+#downloaded new dbset and set a work directory
+```
+
+----
+
+#### Task 12: Load, view and return the structure of the dataset.
+
+```{r}
+# your code goes here
+Names <- read.csv("names_popularity-1.csv") #assigning dataset to Names Variable
+#View(Names) #commenting out
+str(Names) #getting a str of the dataset
+```
+
+----
+
+#### Task 13: Create a line graph as per the instructions sheet:
+
+```{r}
+# your code goes here
+ggplot(data=Names, aes(x=Year, y=Number, group=Name)) +   #calling ggplot for a graph
+  geom_line(aes(color=Name), linewidth=1) +   #creating line graph
+  theme_light() +  #adding themese
+  labs(x="Years", y="Numbers", title = "Names' Popularity") #adding labels
+```
+
+----
+
+#### Task 14: Saving the line graph as "Names' Popularity Line graph.png":
+
+```{r}
+# your code goes here
+ggsave("Names' Popularity Line graph.png") #save the image
+```
+
+----
+
