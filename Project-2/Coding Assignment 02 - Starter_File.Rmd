@@ -7,14 +7,6 @@ text.align: justify
 
 ----
 
-### Type your student name and ID
-
-Name and ID: Jayti Saparia and 702792621
-
----
-
-----
-
 #### Task 1: Download and load the required packages:
 
 ```{r}
