@@ -1,0 +1,224 @@
+---
+title: "Coding Assignment 02"
+date: "`r Sys.Date()`"
+output: html_document
+text.align: justify
+---
+
+----
+
+### Type your student name and ID
+
+Name and ID: Jayti Saparia and 702792621
+
+---
+
+----
+
+#### Task 1: Download and load the required packages:
+
+```{r}
+# your code goes here
+library(ggplot2) #loading ggplot2 library
+library(readr) #loading readr library
+```
+
+----
+
+#### Task 2: Load, view and return the structure of the mtcars built-in dataset.
+
+```{r}
+# your code goes here
+#loading and viewing dataset
+data(mtcars)
+#View(mtcars)
+str(mtcars) #getting structure of mtcars
+```
+
+----
+
+#### Task 3: Follow the instruction sheet to add box plot.
+
+```{r}
+# your code goes here
+ggplot(data= mtcars, mapping = aes(x=factor(cyl), y=mpg)) + #assigning values for a graph
+  geom_boxplot(width=0.3) + #drawing boxplot
+  labs(x="Cyl", y="mpg", title="Box Plots") + #adding labels
+  stat_summary(fun="mean", geom="point", size=1.5, shape=21, color="blue") #adding mean to the graph
+  
+```
+
+----
+
+#### Task 4: Saving the plot as "Box Plot.png".
+
+```{r}
+# your code goes here
+ggsave("Box Plot.png") #saving the graph
+```
+
+----
+
+#### Task 5: Follow the instruction sheet to add a facetted histogram.
+
+```{r}
+# your code goes here
+ggplot(data=mtcars,aes(x= mpg)) + #adding x axis value
+  geom_histogram(binwidth = 5, color="white", fill="blue4") + #calling function to draw histogram
+  facet_wrap(~ gear, nrow=3) + #splitting graph
+theme_bw() #adding theme + 
+ggsave("MPG facetted by Gear.png") #saving the image
+```
+
+----
+
+#### Task 6: Follow the instructions sheet to add a histogram .
+
+```{r}
+# your code goes here
+ggplot(data=mtcars,aes(x= mpg)) + #adding x axis value
+  geom_histogram(bins = 4, color="white", fill="red") + #calling function to draw histogram
+  labs(x="Mile per Gallon (mpg)", y="counts", title="A Histogram for MPG", subtitle="mtcars dataset") + #adding labels
+theme_bw() #adding theme 
+
+```
+
+----
+
+#### Task 7: Follow the instructions sheet to add a facetted histogram.
+
+```{r}
+# your code goes here
+ggplot(data=mtcars, aes(x=carb, fill=factor(cyl))) + #assigning values for x axis
+  geom_histogram(binwidth=3, color="blue") + # for histogram 
+  labs(x="Carburetors", y="Frequency")+ #adding labels
+theme_light() + #adding theme
+  facet_wrap(~ cyl) + #adding facet 
+  theme(legend.position="top")  #adjusting legend position
+ggsave("Facetted histogram.png")
+```
+
+----
+
+#### Task 8: Follow the instructions sheet to add a bar plot.
+
+```{r}
+# Your code goes here
+ggplot(data=mtcars, aes(x=factor(cyl), fill=factor(cyl))) + #assigning x axis 
+  geom_bar(width=0.5) + #creating bar graph
+  theme_bw() + #adding a theme
+  labs(x="Cylinder", y="Count", title="Bar plot for mtcars cylinders") + #adding labels
+  theme(legend.position = "none") # removing legend
+ggsave("mtcars cylinders.png") #saving graph
+```
+
+----
+
+#### Task 9: Download the Train_crash dataset and set the workdirectory where you saved the dataset.
+
+```{r}
+# Download the Train_crash dataset.
+# Set the working directory where you saved the Train_crash dataset.
+```
+
+----
+
+#### Task 10: Load, view and return the structure of the Train_ds dataset.
+
+```{r}
+# your code goes here
+Train_ds <- read.csv("Train_crash.csv") #assigning new variable for csv
+#View(Train_ds) #viewing dataset
+str(Train_ds) #vieiwng the structure of the dataset
+```
+
+----
+
+#### Task 11: Add a bar plot showing the Survival Rate.
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Survived), fill=factor(Survived))) + #assigning values of axis and fill
+  geom_bar(width=0.5) + #for getting bar chart
+  labs(x="Survived", y="Passenger Count", title="Train Crash Survival Rate") + #adding labels
+  theme_light() #adding a theme
+
+```
+
+----
+
+#### Task 12: Add a bar plot showing the Survival Rate by gender.
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Survived), fill=factor(Gender))) + #assigning x axis 
+  geom_bar( width= 0.5) + #adding geom_bar function
+  labs(x="Survived", y="Passenger Count", title = "Train Crash Survival Rate by Gender") +
+  theme_bw() #adding a theme
+```
+
+----
+
+#### Task 13: Add a bar plot showing the Ticket Class by Gender
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Tick_Class), fill=factor(Gender))) + #assigning x axis 
+  geom_bar( width= 0.8, position="dodge") + #adding geom_bar function
+  labs(x="Ticket Class", y="Passenger Count", title = "Ticket Class by Gender") + #adding labels
+  theme_bw() #adding a theme
+```
+
+
+----
+
+#### Task 14: Add a bar plot showing the Survival Rate by Ticket Class
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Tick_Class), fill=factor(Survived))) + #assigning x axis 
+  geom_bar( width= 0.7, position="dodge") + #adding geom_bar function
+  labs(x="Ticket Class", y="Passenger Count", title = "Train Crash Survival Rates by Class ") + #adding labels
+  theme_light() #adding a theme
+```
+
+----
+
+#### Task 15: Add a bar plot showing the Ticket Class per the Embarked Port
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Tick_Class), fill=factor(Port_embark))) + #assigning x axis 
+  geom_bar( width= 0.8, position="dodge") + #adding geom_bar function
+  labs(x="Ticket Class", y="Passenger Count", title = "Ticket Class per the Embarked Port") + #adding labels
+  theme_light() #adding a theme
+```
+
+----
+
+#### Task 16: Add a bar plot showing the Embarked Port Survival Rate by Ticket Class
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Survived), fill=factor(Tick_Class))) + #assigning x axis 
+  geom_bar( width= 0.8, position="dodge") + #adding geom_bar function
+  labs(x="Survived", y="Passenger Count", title = "Embarked Port Survival Rate by Ticket Class") +
+  theme_light() + #adding a theme
+  facet_wrap( ~ Port_embark) #adding facet
+```
+
+----
+
+#### Task 17: Add a bar plot showing the Gender Survival Rate by Ticket Class
+
+```{r}
+# your code goes here
+ggplot(data=Train_ds, aes(x=factor(Survived), fill=factor(Tick_Class))) + #assigning x axis 
+  geom_bar( width= 0.7, position="dodge") + #adding geom_bar function
+  labs(x="Survived", y="Passenger Count", title = "Gender Survival Rate by Ticket Class") +
+  theme_light() + #adding a theme
+  facet_wrap( ~ Gender) #adding facet
+ggsave("Gender Survival Rate by Ticket Class.png") #saving the image
+```
+
+----
