@@ -12,3 +12,11 @@ R-based data analysis assignments and projects involving data cleaning, explorat
 - ggplot2
 - dplyr
 - readr
+
+## Projects
+
+### 📊 Project 1: Exploratory Data Analysis
+- Basic data visualization using ggplot2
+- Data import using readr
+- Basic mathematical calculations
+- [View Project](Project-1)
