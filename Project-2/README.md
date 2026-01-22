@@ -14,19 +14,13 @@ The objective is to explore and compare different visualization methods for unde
 ## Visualizations Included
 
 ### Boxplot
-<p align="center">
   <img src="plots/boxplot.png" width="400">
-</p>
 
 ### Histogram Plot
-<p align="center">
   <img src="plots/histogram.png" width="400">
-</p>
 
 ### Bar Chart
-<p align="center">
   <img src="plots/bar_chart.png" width="400">
-</p>
 
 ## Summary
 Different visualization techniques highlight different aspects of the data, such as distribution, variability, and category-level comparisons.
