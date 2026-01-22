@@ -10,10 +10,19 @@ This project focuses on basic exploratory data analysis using R. The objective w
 - readr
 - ggplot2
 
-## Summary
-This project demonstrates fundamental data visualization techniques and data interpretation skills.
-
 ## Database Used 
 - USArrests
 - names_popularity-1.csv
+
+## Visualizations
+### Data Analysis with Scatter Graph
+<img src="plots/ScatterPlot.png" width="400">
+
+### Data Analysis with Line Graph
+<img src="plots/LineGraph.png" width="400">
+
+## Summary
+This project demonstrates fundamental data visualization techniques and data interpretation skills.
+
+
 
