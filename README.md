@@ -6,7 +6,7 @@ R-based data analysis assignments and projects involving data cleaning, explorat
 - Exploratory Data Analysis (EDA)
 - Data visualization using ggplot2
 - Descriptive Statistics and Data Imputation
-- Data visualization using ggplot2
+- Inferential Statistics & Regression
 
 📚 Tools & Libraries:
 - R Studio
@@ -15,6 +15,7 @@ R-based data analysis assignments and projects involving data cleaning, explorat
 - readr
 - naniar
 - mice
+- ggpubr
 
 ## Projects
 
@@ -31,6 +32,6 @@ R-based data analysis assignments and projects involving data cleaning, explorat
 - Describing the database statistically, missing value identification and data imputation using naniar package(mean).
 - [View Project](Project-3)
 
-### 📊 Project 4: Inferential Statistics​
-- Advanced data visualization using ggplot2 - Boxplot, Violin Plot, Histogram and Bar Chart
+### 📊 Project 4: Inferential Statistics and Regression​
+- Testing hypotheses using inferential statistical methods and performing linear and logistic regression.
 - [View Project](Project-4)
