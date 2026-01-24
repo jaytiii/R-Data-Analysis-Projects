@@ -1,18 +1,3 @@
----
-title: "Coding Assignment 03"
-date: "`r Sys.Date()`"
-output: html_document
-text.align: justify
----
-
-----
-
-### Type your student name and ID
-
-Name and ID: Jayti Saparia and 702792621 
-
----
-
 #### Task 1: Download the Admission dataset and set the work directory:
 
 ```{r}
