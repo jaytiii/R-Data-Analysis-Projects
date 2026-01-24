@@ -1,13 +1,4 @@
 ---
-title: "Coding Assignment 01"
-date: "`r Sys.Date()`"
-output: html_document
-text.align: justify
----
-
-----
-
----
 
 #### Task 1: Calculate the following quantities:
 
