@@ -11,12 +11,12 @@ The goal is to improve data quality and reliability before further analysis.
 
 ## Key Visualizations
 ### Heatmap of Missing Value 
-<p align="center">
+<p>
   <img src="plot/heatmap.png" width="400">
 </p>
 
 ### Missing Value before Data Imputation
-<p align="center">
+<p>
   <img src="plot/missingvalue.png" width="400">
 </p>
 
