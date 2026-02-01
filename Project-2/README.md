@@ -1,4 +1,4 @@
-# Project 1: Data Visulization in R
+# Project 2: Data Visulization in R
 
 This project focuses on advance data Visulization (BoxPlot, Histogram, Facetted Bar Chart) different  using R. 
 The objective is to explore and compare different visualization methods for understanding data distributions and categories.
