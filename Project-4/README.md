@@ -13,7 +13,7 @@ This project applies inferential statistical methods to test hypotheses and anal
 - Logistic regression
 
 ## Key Visualizations
-### Linear Regression MOdel
+### Linear Regression Model
   <img src="plots/linear_regression.png" width="400">
 
 ## Summary
